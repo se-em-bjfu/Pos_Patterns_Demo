@@ -3,7 +3,7 @@ package bjfu.em.se.pos.domain.salepricing;
 import bjfu.em.se.pos.domain.Sale;
 
 /**
- * 无折扣
+ * 无折扣 定价策略实现类
  * @author Roy
  *
  */

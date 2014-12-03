@@ -2,6 +2,11 @@ package bjfu.em.se.pos.domain.salepricing;
 
 import bjfu.em.se.pos.domain.Sale;
 
+/**
+ * 按照固定百分比打折的定价策略实现类
+ * @author Roy
+ *
+ */
 public class PercentDiscountPricingStrategy implements ISalePricingStrategy {
 	protected double percentage;
 	/**
