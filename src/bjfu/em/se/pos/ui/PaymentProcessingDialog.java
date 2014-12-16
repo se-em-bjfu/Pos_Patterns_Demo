@@ -39,7 +39,7 @@ public class PaymentProcessingDialog extends JDialog {
 				register.getSale().getPreDiscountTotal())/100));
 		lblDiscountPrice.setText(
 			String.format("%.2f元", (double)(
-				register.getSale().getTotal())/100));
+				register.getSale().getDiscountedTotal())/100));
 		lblDiscountInfo.setText(
 			register.getSale().getPricingStrategy().getName());
 					

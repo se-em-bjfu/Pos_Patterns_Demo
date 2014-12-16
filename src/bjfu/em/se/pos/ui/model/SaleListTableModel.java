@@ -43,7 +43,7 @@ public class SaleListTableModel extends AbstractTableModel {
 		case 3:
 			return sale.getPricingStrategy().getName();
 		case 4:
-			return String.format("%.2f",(double)sale.getTotal()/100);
+			return String.format("%.2f",(double)sale.getDiscountedTotal()/100);
 		case 5:
 			return String.format("%.2f",(double)sale.getPayment().getAmount()/100);
 		case 6:

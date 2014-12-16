@@ -40,7 +40,7 @@ public class SaleInfoDialog extends JDialog {
 				sale.getLineItems().size(),
 				(double)sale.getPreDiscountTotal()/100,
 				sale.getPricingStrategy().getName(),
-				(double)sale.getTotal()/100)
+				(double)sale.getDiscountedTotal()/100)
 			);
 		lblSaleInfo.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		getContentPane().add(lblSaleInfo, BorderLayout.NORTH);

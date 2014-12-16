@@ -5,7 +5,7 @@ public class PricingStrategyFactory {
 	private static int count=0;
 
 	/**
-	 * 创建定价策略实例
+	 * 轮流创建不同的定价策略实例
 	 * @return
 	 */
 	public static ISalePricingStrategy createPricingStrategy() {

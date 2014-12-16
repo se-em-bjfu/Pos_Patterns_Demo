@@ -48,12 +48,16 @@ public class Sale {
 	public void becomeComplete() {
 		isComplete=true;		
 	}
-	public int getTotal() {
-		return pricingStrategy.getTotal(this);
+	/**
+	 * 计算折后总价
+	 * @return
+	 */
+	public int getDiscountedTotal() {
+		return pricingStrategy.calculate(this);
 	}
 	public int makePayment(int amount, PaymentType type) {
 		payment=PaymentFactory.createPayment(amount, type);
-		return amount-getTotal();
+		return amount-getDiscountedTotal();
 	}
 	public List<SalesLineItem> getLineItems() {
 		return Collections.unmodifiableList(lineItems);
@@ -66,11 +70,15 @@ public class Sale {
 	 * @return
 	 */
 	public int getBalance() {
-		return payment.getAmount()-getTotal();
+		return payment.getAmount()-getDiscountedTotal();
 	}
 	public Date getDate() {
 		return date;
 	}
+	/**
+	 * 计算折前总价	 * 
+	 * @return
+	 */
 	public int getPreDiscountTotal() {
 		int total=0;
 		//JavaSE 5引入的集合遍历语法
